@@ -38,6 +38,7 @@ public class AddressBookMain {
 		email=sc.next();
 		
 		Contact contact = new Contact(fName, lName, address, city, state, zipCode, phNumber, email);
+		addressBook.addContact(contact);
 		
 	}
 }
