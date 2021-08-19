@@ -26,6 +26,7 @@ public class AddressBookMain {
 		while(choice!=10) {
 			System.out.println("Press 1 to add contact");
 			System.out.println("Press 2 to edit contact");
+			System.out.println("Press 3 to delete a contact");
 			System.out.println("Press 10 to exit");
 			
 			choice = sc.nextInt();
@@ -53,6 +54,7 @@ public class AddressBookMain {
 				addressBook.addContact(contact);
 				break;
 			}
+			
 			case 2:{
 				System.out.println("Enter the first name of the person whose details need to be edited");
 				fName=sc.next();
@@ -60,6 +62,16 @@ public class AddressBookMain {
 				fName+=sc.next();
 				addressBook.editContact(fName);
 			}
+			
+			case 3:{
+				System.out.println("Enter the first name of the person whose details need to be deleted");
+				fName=sc.next();
+				System.out.println("Enter the last name of the person whose details need to be deleted");
+				fName+=sc.next();
+				addressBook.deleteContact(fName);
+			}
+				
+			
 				
 			
 			}	

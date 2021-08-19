@@ -17,7 +17,7 @@ public class AddressBook {
 	
 	public void addContact(Contact contact) {
 		addBook.add(contact);
-		//System.out.println(addBook.size());
+		System.out.println(addBook.size());
 	}
 
 	public void editContact(String fName) {
@@ -40,23 +40,55 @@ public class AddressBook {
 					System.out.println("Enter the new Address");
 					String newAddress = sc.nextLine();
 					contact.setAddress(newAddress);
-					String val = contact.getAddress();
-					System.out.println(val);
+					System.out.println("Address updated");
 					break;
 				case 2:
 					System.out.println("Enter the new City");
 					String newCity = sc.nextLine();
 					contact.setAddress(newCity);
+					System.out.println("City updated");
 					break;
-					
-
+				case 3:
+					System.out.println("Enter the new State");
+					String newState = sc.nextLine();
+					contact.setAddress(newState);
+					System.out.println("State updated");
+					break;
+				case 4:
+					System.out.println("Enter the new ZipCode");
+					String newZip = sc.nextLine();
+					contact.setAddress(newZip);
+					System.out.println("Zip Code updated");
+					break;
+				case 5:
+					System.out.println("Enter the new Phone Number");
+					String newPhoneNumber = sc.nextLine();
+					contact.setAddress(newPhoneNumber);
+					System.out.println("Phone Number updated");
+					break;
+				case 6:
+					System.out.println("Enter the new E-mail");
+					String newEMail = sc.nextLine();
+					contact.setAddress(newEMail);
+					System.out.println("E-mail updated");
+					break;
 				}
-				
-				
+			}
+			else 
+				System.out.println("No such contact found");	
+		}
+		sc.close();
+	}
+
+	public void deleteContact(String fName) {
+		String name = "";
+		for(Contact contact : addBook) {
+			name = contact.getfName() + contact.getlName();
+			if(fName.equals(name)) {
+				addBook.remove(contact);
 			}
 		}
-		
-		
+		//System.out.println(addBook.size());
 	}
 
 }
